@@ -7,6 +7,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
 import { presetAttributify, presetUno, presetIcons } from 'unocss'
 import Components from 'unplugin-vue-components/vite'
+import vuetify from 'vite-plugin-vuetify'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -22,11 +23,12 @@ export default defineConfig({
         /\.vue\?vue/, // .vue
         /\.md$/ // .md
       ],
-      imports: ['vue']
+      imports: ['vue','vue-router']
     }),
     Components({
       dts: true,
-    })
+    }),
+    vuetify({ autoImport: true })
   ],
   resolve: {
     alias: {

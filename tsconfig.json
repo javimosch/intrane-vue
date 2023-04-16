@@ -1,6 +1,10 @@
 {
   "include": ["auto-imports.d.ts","components.d.ts"],
   "files": [],
+  "compilerOptions": {
+    "target":"es6",
+    "lib":["es2017","dom","es6","esnext"]
+  },
   "references": [
     {
       "path": "./tsconfig.node.json"
